@@ -1,34 +1,63 @@
 public class Time {
 
     //Properties
-    int start;
-    int end;
+    public int minutes;
+    public int hour;
 
     //Methods
 
-    Time(){
-        this.start = 0;
-        this.end = 0;
+    public boolean validate(){
+
+        //validate if its within 00:00 - 23:59
+        boolean valid = false;
+
+        if (this.hour >= 0 && this.hour <= 23){
+            if (this.minutes >= 0 && this.minutes <= 59){
+                valid = true;
+            }
+        }
+
+        return valid;
     }
 
-    Time(int start, int end){
-        this.start = start;
-        this.end = end;
+    public boolean isBefore(Time time){
+
+        //Returns true if this.time is before
+
+        boolean status = false;
+        if(this.hour < time.hour){
+            status = true;
+        }
+        else if(this.hour == time.hour){
+            if(this.minutes < time.minutes){
+                status = true;
+            }
+        }
+
+        return status;
     }
 
-    public void setStart(int start){
-        this.start = start;
+    public boolean isAfter(Time time){
+
+            boolean status = false;
+            if(this.hour > time.hour){
+                status = true;
+            }
+            else if(this.hour == time.hour){
+                if(this.minutes > time.minutes){
+                    status = true;
+                }
+            }
+
+            return status;
     }
 
-    public int getStart(){
-        return this.start;
+    public String timeFormat(){
+        String format = this.hour + ":" + this.minutes;
+        return format;
     }
 
-    public void setEnd(int start){
-        this.start = start;
-    }
 
-    public int getEnd(){
-        return this.end;
-    }
+
+
 }
