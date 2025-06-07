@@ -6,13 +6,13 @@ public class Time {
 
     //Methods
 
-    public boolean validate(){
+    public boolean validate(int mins, int hrs){
 
         //validate if its within 00:00 - 23:59
         boolean valid = false;
 
-        if (this.hour >= 0 && this.hour <= 23){
-            if (this.minutes >= 0 && this.minutes <= 59){
+        if (hrs >= 0 && hrs <= 23){
+            if (mins >= 0 && min <= 59){
                 valid = true;
             }
         }
@@ -57,7 +57,25 @@ public class Time {
         return format;
     }
 
+    public void initializeTime(String time){
+        int tempMinutes = Integer.parseInt(time.substring(0, 2));
+        int tempHour = Integer.parseInt(time.substring(3, 5));
+    }
 
+    public void setMinutes(int minutes){
+        this.minutes = minutes;
+    }
 
+    public void setHour(int hour){
+        this.hour = hour;
+    }
+
+    public int getMinutes(){
+        return this.minutes;
+    }
+
+    public int getHour(){
+        return this.hour;
+    }
 
 }

@@ -9,7 +9,6 @@ public class Task {
 
     // Methods
 
-
     public boolean isValid(){
         //checks if start and end times are valid
         boolean status = false;
@@ -25,4 +24,5 @@ public class Task {
         String format = startTime.timeFormat() + " to " + endTime.timeFormat() + " : " + shortName + " - " + description;
         return format;
     }
+
 }
