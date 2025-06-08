@@ -2,12 +2,16 @@ public class Task {
 
     //Properties / Attributes
 
-    String shortName;
-    String description;
-    Time startTime;
-    Time endTime;
+    private String shortName;
+    private String description;
+    private Time startTime;
+    private Time endTime;
 
     // Methods
+    public Task() {
+        this.startTime = new Time();
+        this.endTime = new Time();
+    }
 
     public boolean isValid(){
         //checks if start and end times are valid
@@ -25,4 +29,35 @@ public class Task {
         return format;
     }
 
+    public Time getStartTime() {
+        return this.startTime;
+    }
+
+    public Time getEndTime() {
+        return this.endTime;
+    }
+
+    public void setStartTime(Time startTime) {
+        this.startTime = startTime;
+    }
+
+    public void setEndTime(Time endTime) {
+        this.endTime = endTime;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setShortName(String shortName) {
+        this.shortName = shortName;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getShortName() {
+        return shortName;
+    }
 }

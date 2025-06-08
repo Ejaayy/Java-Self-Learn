@@ -1,10 +1,14 @@
 public class Time {
 
     //Properties
-    public int minutes;
-    public int hour;
+    private int minutes;
+    private int hour;
 
     //Methods
+    public Time() {
+        this.hour = 0;
+        this.minutes = 0;
+    }
 
     public boolean validate(){
 

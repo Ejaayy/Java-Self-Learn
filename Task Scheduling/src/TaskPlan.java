@@ -7,19 +7,20 @@ public class TaskPlan {
 
     // Methods
     public void displayTasks(){
-        for(int i=0; i<2; i++){
+        System.out.println("Here is your schedule for today!");
+        for(int i=0; i< this.taskList.length; i++){
             System.out.println(taskList[i].taskFormat());
         }
     }
 
     public boolean isTimeSlotAvailable(Time newStart, Time newEnd, Task currentTask) {
-        for (int i =0 ; i<2; i++) {
+        for (int i =0 ; i<this.taskList.length; i++) {
             if(taskList[i] == currentTask){
                 continue; //skip
             }
             else{
                 // overlap if newStart < endTime AND startTime < newEnd
-                if (newStart.isBefore(taskList[i].endTime) && taskList[i.startTime.isBefore(newEnd)) {
+                if (newStart.isBefore(taskList[i].getEndTime()) && taskList[i].getStartTime().isBefore(newEnd)) {
                     return false; // time slot is occupied
                 }
             }
