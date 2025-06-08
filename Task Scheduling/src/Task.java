@@ -13,7 +13,7 @@ public class Task {
         //checks if start and end times are valid
         boolean status = false;
 
-        if(startTime.isBefore(endTime)){
+        if(this.startTime.isBefore(this.endTime)){
             status = true;
         }
         return status;
