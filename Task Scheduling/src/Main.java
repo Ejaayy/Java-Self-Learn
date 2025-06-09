@@ -16,7 +16,7 @@ public class Main {
         System.out.println("Please input your tasks below: ");
         System.out.println("---------------------------------");
 
-        for(int i=0; i<2; i++){
+        for(int i=0; i< taskplan.taskList.length; i++){
 
 
             System.out.printf("Task %d Name: ", i+1);
@@ -58,7 +58,9 @@ public class Main {
 
             System.out.println("---------------------------------");
         }
-
+        TaskSorter sort = new TaskSorter(taskplan.taskList);
+        sort.sortByEndTime(taskplan.taskList);
+        taskplan.taskList = sort.getSortedTasks();
         taskplan.displayTasks();
     }
 }

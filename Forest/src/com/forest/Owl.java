@@ -4,7 +4,7 @@ public class Owl {
     private float size;
     private String color;
     private boolean satiated; //hungry or full
-
+    private static int population = 0;
     public Owl(){
 
         this.size = 20;
@@ -62,5 +62,9 @@ public class Owl {
 
     public void setColor(String color){
         this.color = color;
+    }
+
+    public static int getPopulation() {
+        return population;
     }
 }
