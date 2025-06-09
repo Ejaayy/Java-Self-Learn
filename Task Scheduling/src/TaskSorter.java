@@ -1,12 +1,16 @@
 import java.util.Arrays;
 
 public class TaskSorter {
+
+    //Properties
     private Task[] taskList;
 
+    //Constructor
     public TaskSorter(Task[] taskList) {
         this.taskList = taskList;
     }
 
+    //Methods
     public void sortByEndTime(Task[] tasks) {
         int n = tasks.length;
         for (int i = 0; i < n - 1; i++) {

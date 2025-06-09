@@ -7,12 +7,13 @@ public class Task {
     private Time startTime;
     private Time endTime;
 
-    // Methods
+    // Constructors
     public Task() {
         this.startTime = new Time();
         this.endTime = new Time();
     }
 
+    // Methods
     public boolean isValid(){
         //checks if start and end times are valid
         boolean status = false;

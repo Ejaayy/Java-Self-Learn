@@ -4,12 +4,13 @@ public class Time {
     private int minutes;
     private int hour;
 
-    //Methods
+    //Constructors
     public Time() {
         this.hour = 0;
         this.minutes = 0;
     }
 
+    //Methods
     public boolean validate(){
 
         //validate if its within 00:00 - 23:59
