@@ -58,7 +58,7 @@ public class Time {
     }
 
     public String timeFormat(){
-        String format = this.hour + ":" + this.minutes;
+        String format = String.format("%02d:%02d", this.hour, this.minutes);
         return format;
     }
 

@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.Scanner;
+
 
 public class TaskSorter {
 
@@ -11,6 +13,7 @@ public class TaskSorter {
     }
 
     //Methods
+
     public void sortByEndTime(Task[] tasks) {
         int n = tasks.length;
         for (int i = 0; i < n - 1; i++) {
@@ -21,17 +24,6 @@ public class TaskSorter {
                     tasks[j] = tasks[j + 1];
                     tasks[j + 1] = temp;
                 }
-            }
-        }
-
-        List<Task> selectedTasks = new ArrayList<>();
-        selectedTasks.add(tasks[0]);
-        Time lastEndTime = tasks[0].getEndTime();
-
-        for (int i = 1; i < tasks.length; i++) {
-            if (!tasks[i].getStartTime().isBefore(lastEndTime)) {
-                selectedTasks.add(tasks[i]);
-                lastEndTime = tasks[i].getEndTime();
             }
         }
     }
