@@ -6,28 +6,41 @@ public class TaskSorter {
 
     //Properties
     private Task[] taskList;
+    private int n;
 
     //Constructor
     public TaskSorter(Task[] taskList) {
-        this.taskList = taskList;
+        //Copies the taskList for sorting
+        this.taskList = Arrays.copyOf(taskList);
+        this.n = taskList.length;
     }
 
     //Methods
 
-    public void sortByEndTime(Task[] tasks) {
-        int n = tasks.length;
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - i - 1; j++) {
-                if (tasks[j].getEndTime().isAfter(tasks[j + 1].getEndTime())) {
+    public void sortByEndTime() {
+
+        for (int i = 0; i < this.n - 1; i++) {
+            for (int j = 0; j < this.n - i - 1; j++) {
+                if (taskList[j].getEndTime().isAfter(taskList[j + 1].getEndTime())) {
                     // swap tasks[j] and tasks[j+1]
-                    Task temp = tasks[j];
-                    tasks[j] = tasks[j + 1];
-                    tasks[j + 1] = temp;
+                    Task temp = taskList[j];
+                    taskList[j] = taskList[j + 1];
+                    taskList[j + 1] = temp;
                 }
             }
         }
     }
 
+    public void greedyAlgorithm(Task[] tasks){
+        sortByEndTime();
+
+        tasks[0] = taskList[0];
+        for(int i =1 ; i < this.n; i++){
+            for(int j = i + 1; j < this.n; j++){
+
+            }
+        }
+    }
     public Task[] getSortedTasks() {
         return taskList;
     }

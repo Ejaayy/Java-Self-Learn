@@ -1,4 +1,3 @@
-import java.util.List;
 import java.util.Scanner;
 
 public class TaskPlan {
@@ -29,32 +28,23 @@ public class TaskPlan {
 
             boolean flag = true;
 
-            while (flag) {
-                do {
-                    System.out.print("Input Starting Time [00:00 - 23:59]: ");
-                    String startingTime = scanner.nextLine();
-                    taskList[i].getStartTime().initializeTime(startingTime);
-                } while (!taskList[i].getStartTime().validate());
+            do {
+                System.out.print("Input Starting Time [00:00 - 23:59]: ");
+                String startingTime = scanner.nextLine();
+                taskList[i].getStartTime().initializeTime(startingTime);
+            } while (!taskList[i].getStartTime().validate());
 
-                do {
-                    System.out.print("Input Ending Time [00:00 - 23:59]: ");
-                    String endingTime = scanner.nextLine();
-                    taskList[i].getEndTime().initializeTime(endingTime);
-                } while (!taskList[i].getEndTime().validate() || !taskList[i].isValid());
-
-                if (taskplan.isTimeSlotAvailable(taskList[i].getStartTime(), taskList[i].getEndTime(), taskList[i])) {
-                    flag = false;
-                } else {
-                    System.out.println("Scheduling conflict! Please input a valid schedule. ");
-                }
-            }
+            do {
+                System.out.print("Input Ending Time [00:00 - 23:59]: ");
+                String endingTime = scanner.nextLine();
+                taskList[i].getEndTime().initializeTime(endingTime);
+            } while (!taskList[i].getEndTime().validate() || !taskList[i].isValid());
 
             System.out.println("---------------------------------");
         }
 
         TaskSorter sort = new TaskSorter(taskList);
-        sort.sortByEndTime(taskList);
-        taskList = sort.getSortedTasks();
+
         taskplan.displayTasks();
 
         scanner.close();
