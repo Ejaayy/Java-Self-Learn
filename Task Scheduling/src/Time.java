@@ -57,6 +57,18 @@ public class Time {
             return status;
     }
 
+    public boolean equals(Time time) {
+        return this.hour == time.hour && this.minutes == time.minutes;
+    }
+
+    public boolean isAfterOrEqual(Time time) {
+        return this.isAfter(time) || this.equals(time);
+    }
+
+    public boolean isBeforeOrEqual(Time time) {
+        return this.isBefore(time) || this.equals(time);
+    }
+
     public String timeFormat(){
         String format = String.format("%02d:%02d", this.hour, this.minutes);
         return format;

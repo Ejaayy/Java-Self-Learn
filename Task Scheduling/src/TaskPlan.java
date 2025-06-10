@@ -9,7 +9,7 @@ public class TaskPlan {
 
     public void run(TaskPlan taskplan) {
         Scanner scanner = new Scanner(System.in);
-        taskList = new Task[2];
+        taskList = new Task[7];
 
         for (int i = 0; i < taskList.length; i++) {
             taskList[i] = new Task();
@@ -44,8 +44,8 @@ public class TaskPlan {
         }
 
         TaskSorter sort = new TaskSorter(taskList);
-
-        taskplan.displayTasks();
+        int index = sort.greedyAlgorithm(taskList);  // get only chosen tasks
+        taskplan.displayTasks(index);
 
         scanner.close();
     }
@@ -66,9 +66,9 @@ public class TaskPlan {
         return true;
     }
 
-    public void displayTasks(){
+    public void displayTasks(int index){
         System.out.println("Here is your schedule for today!");
-        for(int i=0; i< this.taskList.length; i++){
+        for(int i=0; i< index; i++){
             System.out.println(taskList[i].taskFormat());
         }
     }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Array/Array.iml" filepath="$PROJECT_DIR$/Array/Array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BankingProject/BankingProject.iml" filepath="$PROJECT_DIR$/BankingProject/BankingProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Forest/Forest.iml" filepath="$PROJECT_DIR$/Forest/Forest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HelloWorld/HelloWorld.iml" filepath="$PROJECT_DIR$/HelloWorld/HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InputArray/InputArray.iml" filepath="$PROJECT_DIR$/InputArray/InputArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LearnJava.iml" filepath="$PROJECT_DIR$/.idea/LearnJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MadLibs/MadLibs.iml" filepath="$PROJECT_DIR$/MadLibs/MadLibs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MathClass/MathClass.iml" filepath="$PROJECT_DIR$/MathClass/MathClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Methods/Methods.iml" filepath="$PROJECT_DIR$/Methods/Methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ObjectOrientedProgramming/ObjectOrientedProgramming.iml" filepath="$PROJECT_DIR$/ObjectOrientedProgramming/ObjectOrientedProgramming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OverloadedMethods/OverloadedMethods.iml" filepath="$PROJECT_DIR$/OverloadedMethods/OverloadedMethods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Random Class/Random Class.iml" filepath="$PROJECT_DIR$/Random Class/Random Class.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RandomGuessingGame/RandomGuessingGame.iml" filepath="$PROJECT_DIR$/RandomGuessingGame/RandomGuessingGame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ShoppingCart/ShoppingCart.iml" filepath="$PROJECT_DIR$/ShoppingCart/ShoppingCart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task Scheduling/Task Scheduling.iml" filepath="$PROJECT_DIR$/Task Scheduling/Task Scheduling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Varargs/Varargs.iml" filepath="$PROJECT_DIR$/Varargs/Varargs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/compundInterest/compundInterest.iml" filepath="$PROJECT_DIR$/compundInterest/compundInterest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/printfClass/printfClass.iml" filepath="$PROJECT_DIR$/printfClass/printfClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stringMethods/stringMethods.iml" filepath="$PROJECT_DIR$/stringMethods/stringMethods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/subStrings/subStrings.iml" filepath="$PROJECT_DIR$/subStrings/subStrings.iml" />
+    </modules>
+  </component>
+</project>
