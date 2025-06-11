@@ -13,7 +13,7 @@ public class Time {
     //Methods
     public boolean validate(){
 
-        //validate if its within 00:00 - 23:59
+        //validate time if its within 00:00 - 23:59
         boolean valid = false;
 
         if (this.hour >= 0 && this.hour <= 23){
@@ -44,24 +44,28 @@ public class Time {
 
     public boolean isAfter(Time time){
 
-            boolean status = false;
-            if(this.hour > time.hour){
+        //Returns true if this.time is after
+
+        boolean status = false;
+        if(this.hour > time.hour){
+            status = true;
+        }
+        else if(this.hour == time.hour){
+            if(this.minutes > time.minutes){
                 status = true;
             }
-            else if(this.hour == time.hour){
-                if(this.minutes > time.minutes){
-                    status = true;
-                }
-            }
+        }
 
-            return status;
+        return status;
     }
 
     public boolean equals(Time time) {
+        //Returns true if this.time is equals
         return this.hour == time.hour && this.minutes == time.minutes;
     }
 
     public boolean isAfterOrEqual(Time time) {
+
         return this.isAfter(time) || this.equals(time);
     }
 
@@ -70,14 +74,25 @@ public class Time {
     }
 
     public String timeFormat(){
+        // Formats the time into proper String
         String format = String.format("%02d:%02d", this.hour, this.minutes);
         return format;
     }
 
-    public void initializeTime(String time){
-        this.hour = Integer.parseInt(time.substring(0, 2));
-        this.minutes = Integer.parseInt(time.substring(3, 5));
+    public boolean initializeTime(String time){
+
+        boolean valid = false;
+
+        if (time.matches("\\d{2}:\\d{2}")){
+            this.hour = Integer.parseInt(time.substring(0, 2));
+            this.minutes = Integer.parseInt(time.substring(3, 5));
+            valid = true;
+        }
+
+        return valid;
     }
+
+    // Getters and Setters
 
     public void setMinutes(int minutes){
         this.minutes = minutes;

@@ -30,6 +30,8 @@ public class Task {
         return format;
     }
 
+    // Getters and Setters
+
     public Time getStartTime() {
         return this.startTime;
     }

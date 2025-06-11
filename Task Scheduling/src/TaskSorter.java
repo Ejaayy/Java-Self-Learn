@@ -1,6 +1,4 @@
 import java.util.Arrays;
-import java.util.Scanner;
-
 
 public class TaskSorter {
 
@@ -18,7 +16,7 @@ public class TaskSorter {
     //Methods
 
     public void sortByEndTime() {
-
+        // Bubble sort to sort the tasks by End Time
         for (int i = 0; i < this.n - 1; i++) {
             for (int j = 0; j < this.n - i - 1; j++) {
                 if (this.taskList[j].getEndTime().isAfter(this.taskList[j + 1].getEndTime())) {
@@ -68,4 +66,5 @@ public class TaskSorter {
     public Task[] getSortedTasks() {
         return taskList;
     }
+
 }
