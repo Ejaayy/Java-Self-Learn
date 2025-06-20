@@ -33,7 +33,7 @@ public class Menu {
             System.out.print("Enter Choice: ");
             input = this.scanner.nextInt(); //Didn't take the \n
             scanner.nextLine(); //For input buffer
-            System.out.println("\n-------------------------------------------");
+            System.out.println("-------------------------------------------");
 
             switch (input){
                 case 1:
@@ -76,9 +76,10 @@ public class Menu {
     }
 
     public void inputBooks(){
-        System.out.println("-----Book Initialization-----");
+        System.out.println("------------Book Initialization----------");
         System.out.print("How many books will you enter?: ");
         int inputCount = scanner.nextInt();
+        System.out.println("-------------------------------------------");
 
         for(int i = 0; i< inputCount; i++){
             scanner.nextLine(); //For input buffer
@@ -93,7 +94,7 @@ public class Menu {
 
             Book book = new Book(bookTitle, authorName, deweyDecimal);
             books.add(book);
-            System.out.println("-------------------------");
+            System.out.println("-------------------------------------------");
         }
 
     }

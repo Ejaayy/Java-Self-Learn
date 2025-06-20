@@ -55,12 +55,15 @@ public class Library {
     }
 
     public void viewTransactionList(){
-        System.out.println("-------------------------------------------------------------------------------------------");
+        System.out.println();
+        System.out.println("----------------------------------------------------------------------------------------------");
         System.out.println("Transaction Type     | Title               | Author              | Dewey Decimal |   Date");
+        System.out.println("----------------------------------------------------------------------------------------------");
         for (int i = transactionRecord.size() - 1; i >= 0; i--) {
             transactionRecord.get(i).viewTransaction();
         }
-        System.out.println("-------------------------------------------------------------------------------------------");
+        System.out.println("----------------------------------------------------------------------------------------------");
+        System.out.println();
     }
 
 
