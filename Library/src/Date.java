@@ -14,8 +14,8 @@ public class Date {
         this.year = Integer.parseInt(parts[2]);
     }
 
-    public getStringFormat(){
-        return String.format("%02d/%02d/%04d", month, day, year);
+    public String getStringFormat(){
+        return String.format("%02d/%02d/%04d", this.month, this.day, this.year);
     }
 
 }

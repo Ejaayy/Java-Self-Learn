@@ -19,6 +19,23 @@ public class Book {
     }
 
     public void viewBook(){
+        System.out.println("Title: " + title + " | Author: " + author + " | Dewey Decimal: " + deweyDecimal
+                       + " | Status: " + (this.isBorrowed ? "Borrowed" : "Available"));
+    }
 
+    public boolean isBorrowed(){
+        return this.isBorrowed;
+    }
+    
+    public String getTitle() {
+        return title;
+    }
+
+    public int getDeweyDecimal() {
+        return deweyDecimal;
+    }
+
+    public String getAuthor() {
+        return author;
     }
 }
