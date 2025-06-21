@@ -18,13 +18,18 @@ public class Menu {
 
     public void run(){
 
+        //Library Initialization
         this.inputBooks();
         library = new Library(this.books);
         boolean isRunning = true;
 
+        //Loops the program until the user chooses to exit
         while(isRunning){
+
+            //Library Menu Template
             int input;
-            System.out.println("Welcome to the Library");
+            System.out.println("-------------------------------------------");
+            System.out.println("           Welcome to the Library");
             System.out.println("-------------------------------------------");
             System.out.println("1. Borrow a Book");
             System.out.println("2. Return a Book");
@@ -37,11 +42,16 @@ public class Menu {
 
             switch (input){
                 case 1:
+                    //Borrowing a Book input
                     System.out.print("Input Book Name: ");
                     String borrowBook = scanner.nextLine();
                     System.out.print("Input Borrow Date [DD/MM/YYYY]: ");
                     String borrowDate = scanner.nextLine();
+
+                    //Checks book status if its borrowed and if it exists
                     boolean borrowStatus = library.borrowBook(borrowBook, borrowDate);
+
+                    //UI for borrowing status
                     if(borrowStatus){
                         System.out.println("Borrowing Successful!");
                     }
@@ -49,12 +59,18 @@ public class Menu {
                         System.out.println("Borrowing Failed!");
                     }
                     break;
+
                 case 2:
+                    //Returning a Book input
                     System.out.print("Input Book Name: ");
                     String returnBook = scanner.nextLine();
                     System.out.print("Input return Date [DD/MM/YYYY]: ");
                     String returnDate = scanner.nextLine();
+
+                    //Checks book status if its borrowed and if it exists
                     boolean returnStatus = library.returnBook(returnBook, returnDate);
+
+                    //UI for return status
                     if(returnStatus){
                         System.out.println("Return Successful!");
                     }
@@ -62,10 +78,14 @@ public class Menu {
                         System.out.println("Return Failed!");
                     }
                     break;
+
                 case 3:
-                    library.viewTransactionList();
+                    // UI for viewing the Transaction Record
+                    this.library.viewTransactionList();
                     break;
+
                 case 4:
+                    //User chooses to end Program
                     isRunning = false;
                     break;
             }
@@ -76,11 +96,14 @@ public class Menu {
     }
 
     public void inputBooks(){
-        System.out.println("------------Book Initialization----------");
+
+        //UI for inputting books and prompts user how many books to add in library
+        System.out.println("-----------Book Initialization-----------");
         System.out.print("How many books will you enter?: ");
         int inputCount = scanner.nextInt();
         System.out.println("-------------------------------------------");
 
+        //Prompts user for inputting each book
         for(int i = 0; i< inputCount; i++){
             scanner.nextLine(); //For input buffer
             System.out.print("Enter title: ");

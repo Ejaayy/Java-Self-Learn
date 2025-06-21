@@ -14,17 +14,18 @@ public class Book {
         this.isBorrowed = false;
     }
 
+    public boolean isBorrowed(){
+        return this.isBorrowed;
+    }
+
     public void setBorrowed(boolean borrowed) {
         isBorrowed = borrowed;
     }
 
     public void viewBook(){
+        // UI for each book, showing all its details
         System.out.println("Title: " + title + " | Author: " + author + " | Dewey Decimal: " + deweyDecimal
                        + " | Status: " + (this.isBorrowed ? "Borrowed" : "Available"));
-    }
-
-    public boolean isBorrowed(){
-        return this.isBorrowed;
     }
     
     public String getTitle() {
