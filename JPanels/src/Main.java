@@ -14,9 +14,11 @@ public class Main {
         JLabel label = new JLabel();
         label.setText("Hello World");
         label.setIcon(icon);
-        label.setHorizontalTextPosition(JLabel.RIGHT);
-        label.setVerticalTextPosition(JLabel.BOTTOM);
-        label.setBounds(100, 150, 120, 120);  // now this will take effect
+        //label.setHorizontalTextPosition(JLabel.RIGHT);
+        //label.setVerticalTextPosition(JLabel.BOTTOM);
+
+        //from top left
+        label.setBounds(50, 30, 120, 120);  // now this will take effect
 
         JPanel bluePanel = new JPanel();
         bluePanel.setBackground(Color.BLUE);
